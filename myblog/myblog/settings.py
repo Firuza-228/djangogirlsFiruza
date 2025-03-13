@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -20,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-6fh2-hbdsf0_47bxq0^xd8y04vdx-+!9!g&n61%+_ioub9#i(^'
+SECRET_KEY = 'django-insecure-%r)2=(t@u!_*o5)h=j&*!-ji=ya^p8r@*tu!jwj@grhv1)w_yp'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -49,15 +48,14 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+import os
 
 ROOT_URLCONF = 'myblog.urls'
-
-import os
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'blog', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -70,9 +68,13 @@ TEMPLATES = [
     },
 ]
 
+import os
+
 STATIC_URL = 'static/'  
 
-STATICFILES_DIRS = [BASE_DIR / "myblog/static"]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),  
+]
 
 WSGI_APPLICATION = 'myblog.wsgi.application'
 

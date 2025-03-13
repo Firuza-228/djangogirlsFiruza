@@ -9,7 +9,7 @@ h1 {
     color: #6A5ACD;
 }
 
-.create-btn, .back-btn, .submit-btn {
+.create-btn, .edit-btn, .delete-btn, .back-btn, .submit-btn {
     display: inline-block;
     margin: 10px;
     padding: 10px 20px;
@@ -20,6 +20,6 @@ h1 {
     transition: background 0.3s;
 }
 
-.create-btn:hover, .back-btn:hover, .submit-btn:hover {
+.create-btn:hover, .edit-btn:hover, .delete-btn:hover, .back-btn:hover, .submit-btn:hover {
     background-color: #6A5ACD;
 }

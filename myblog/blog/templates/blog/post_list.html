@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h1>Мой блог</h1>
+    <h1>Лавандовый блог</h1>
     <a href="{% url 'post_new' %}" class="create-btn">Создать пост</a>
 
     {% for post in posts %}
@@ -16,9 +16,8 @@
             <h2><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h2>
             <p>{{ post.text|truncatewords:30 }}</p>
             <p><i>Опубликовано: {{ post.published_date }}</i></p>
-            
-            <!-- Кнопка редактирования -->
-            <a href="{% url 'post_edit' post.id %}" class="btn btn-primary">Редактировать</a>
+            <a href="{% url 'post_edit' post.id %}" class="edit-btn">Редактировать</a>
+            <a href="{% url 'post_delete' post.id %}" class="delete-btn">Удалить</a>
         </div>
     {% endfor %}
 </body>
