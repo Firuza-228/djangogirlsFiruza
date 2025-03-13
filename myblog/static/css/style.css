@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E6E6FA;
+    color: #4B0082;
+    text-align: center;
+}
+
+h1 {
+    color: #6A5ACD;
+}
+
+.create-btn, .back-btn, .submit-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #9370DB;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.create-btn:hover, .back-btn:hover, .submit-btn:hover {
+    background-color: #6A5ACD;
+}
