@@ -1,0 +1,99 @@
+/* static/css/styles.css */
+
+/* Основные стили для страницы */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Хедер */
+header {
+    background-color: #800000; /* Бордовый */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+    color: #f8f8f8; /* Легкий оттенок для наведения */
+}
+
+/* Основной контент */
+main {
+    padding: 20px;
+}
+
+/* Заголовок страницы */
+h1 {
+    color: #800000; /* Бордовый */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Стили для списка статей */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #fff0f0; /* Очень светлый бордовый */
+    border: 1px solid #800000; /* Бордовый цвет */
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul li h2 {
+    color: #800000; /* Бордовый */
+    font-size: 1.5em;
+}
+
+ul li p {
+    color: #555;
+    font-size: 1em;
+}
+
+ul li a {
+    color: #800000; /* Бордовый */
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
+    color: #a52a2a; /* Тёмный оттенок бордового для наведения */
+}
+
+ul li img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Стили для пустого списка статей */
+li.empty {
+    color: #777;
+    text-align: center;
+    font-size: 1.2em;
+}

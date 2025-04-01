@@ -1,0 +1,20 @@
+<!-- templates/blog/post_list.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Все статьи</h1>
+<ul>
+    {% for post in posts %}
+    <li>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.text }}</p>
+        <a href="{{ post.source_url }}" target="_blank">Перейти на источник</a>
+        {% if post.image_url %}
+        <img src="{{ post.image_url }}" alt="{{ post.title }}">
+        {% endif %}
+    </li>
+    {% empty %}
+    <li class="empty">Статьи не найдены</li>
+    {% endfor %}
+</ul>
+{% endblock %}

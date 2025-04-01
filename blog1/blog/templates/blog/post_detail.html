@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    <h1>{{ post.title }}</h1>
+    <p>Дата публикации: {{ post.published_date }}</p>
+    <p>{{ post.text }}</p>
+    {% if post.image_url %}
+        <img src="{{ post.image_url }}" alt="Изображение">
+    {% endif %}
+    <a href="{{ post.source_url }}" target="_blank">Источник</a>
+{% endblock %}
